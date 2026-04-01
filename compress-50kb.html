@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Compress Image to 50KB Online Free | Reduce Image Size Instantly</title>
+
+<meta name="description" content="Compress image to 50KB online free. Reduce JPG, PNG, WebP image size without losing quality. Fast, secure and browser-based image compressor tool.">
+
+<meta name="keywords" content="compress image to 50kb, image compressor online, reduce image size, compress jpg to 50kb, png compressor, photo size reducer, image optimizer, free image compressor tool">
+
+<link rel="canonical" href="https://easytool.pages.dev/tools/compress-50kb.html">
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+.tool-box{
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+button{
+background:#2563eb;
+color:#fff;
+padding:10px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{background:#1e40af}
+
+img{
+max-width:100%;
+margin-top:15px;
+border-radius:10px;
+display:none;
+}
+
+a{
+display:none;
+margin-top:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Compress Image to 50KB Online</h1>
+
+<div class="tool-box">
+
+<input type="file" id="upload" accept="image/*">
+<br><br>
+
+<button onclick="compressImage()">Compress to 50KB</button>
+
+<p id="status"></p>
+
+<img id="preview">
+
+<br>
+
+<a id="download">Download Image</a>
+
+</div>
+
+<!-- 🔥 SEO CONTENT START -->
+
+<h2>Compress Image to 50KB Online Free</h2>
+
+<p>
+Compress image to 50KB online is one of the most searched tools on the internet. Many websites, government portals, and job application forms require images under a specific size limit like 50KB. This free tool helps you reduce image size instantly without losing quality.
+</p>
+
+<p>
+This image compressor works directly in your browser, which means your image is never uploaded to any server. It is 100% secure and fast.
+</p>
+
+<h2>Why Use Image Compressor?</h2>
+
+<ul>
+<li>Reduce image file size quickly</li>
+<li>Improve website speed</li>
+<li>Upload images in forms easily</li>
+<li>Save storage space</li>
+</ul>
+
+<h2>Features of This Tool</h2>
+
+<ul>
+<li>Compress image to exact 50KB</li>
+<li>No quality loss</li>
+<li>Fast processing</li>
+<li>Mobile friendly</li>
+<li>Secure (no upload)</li>
+</ul>
+
+<h2>How to Compress Image</h2>
+
+<ul>
+<li>Select your image</li>
+<li>Click compress button</li>
+<li>Download result</li>
+</ul>
+
+<h2>Supported Formats</h2>
+
+<ul>
+<li>JPG / JPEG</li>
+<li>PNG</li>
+<li>WebP</li>
+</ul>
+
+<h2>SEO Benefits</h2>
+
+<p>
+Image compression helps improve website speed, which is a ranking factor in Google. Faster websites get better SEO rankings.
+</p>
+
+<h2>Use Cases</h2>
+
+<ul>
+<li>Passport photo upload</li>
+<li>Signature image compression</li>
+<li>Online forms</li>
+<li>Website optimization</li>
+</ul>
+
+<h2>High Demand Keywords</h2>
+
+<p>
+compress image to 50kb, reduce image size online, image compressor free, compress jpg to 50kb, png image compressor, photo size reducer, image optimizer online, compress image without losing quality, resize image under 50kb, reduce kb of image, compress image instantly, online image compressor tool, free photo compressor, compress image for form, passport size image compressor, fast image compressor, best image compressor online
+</p>
+
+<h2>Related Tools</h2>
+
+<a href="compress-100kb.html">Compress 100KB</a> |
+<a href="image-resizer.html">Image Resizer</a> |
+<a href="../index.html">Home</a>
+
+<!-- 🔥 SEO CONTENT END -->
+
+</div>
+
+<script>
+
+function compressImage(){
+
+let file = document.getElementById("upload").files[0];
+
+if(!file){
+alert("Upload image first");
+return;
+}
+
+let reader = new FileReader();
+let img = new Image();
+
+reader.onload = e => img.src = e.target.result;
+
+img.onload = function(){
+
+let canvas = document.createElement("canvas");
+let ctx = canvas.getContext("2d");
+
+// Resize for performance
+let maxWidth = 1200;
+let scale = Math.min(maxWidth / img.width, 1);
+
+canvas.width = img.width * scale;
+canvas.height = img.height * scale;
+
+ctx.drawImage(img,0,0,canvas.width,canvas.height);
+
+let quality = 0.9;
+let target = 50 * 1024;
+
+function loop(){
+canvas.toBlob(blob=>{
+
+if(blob.size <= target || quality < 0.1){
+
+let url = URL.createObjectURL(blob);
+
+let preview = document.getElementById("preview");
+preview.src = url;
+preview.style.display = "block";
+
+let link = document.getElementById("download");
+link.href = url;
+link.download = "compressed-50kb.jpg";
+link.style.display = "inline-block";
+
+document.getElementById("status").innerText =
+"Final Size: " + (blob.size/1024).toFixed(2) + " KB";
+
+}else{
+quality -= 0.05;
+loop();
+}
+
+}, "image/jpeg", quality);
+}
+
+loop();
+
+};
+
+reader.readAsDataURL(file);
+}
+
+</script>
+
+</body>
+</html>

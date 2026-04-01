@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EMI Calculator Online Free | Loan EMI Calculator | EasyTool</title>
+
+<meta name="description" content="Calculate EMI online free. Use this loan EMI calculator to calculate monthly EMI, total interest and payment instantly. Fast, accurate and easy to use.">
+
+<meta name="keywords" content="emi calculator, loan emi calculator, calculate emi online, home loan emi, car loan emi, personal loan calculator">
+
+<link rel="canonical" href="https://easytool.pages.dev/tools/emi-calculator.html">
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+.tool-box{
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+input{
+padding:10px;
+margin:10px;
+width:80%;
+max-width:300px;
+}
+
+button{
+background:#2563eb;
+color:#fff;
+padding:10px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{background:#1e40af}
+
+.result-box{
+margin-top:15px;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>EMI Calculator</h1>
+
+<div class="tool-box">
+
+<input type="number" id="amount" placeholder="Loan Amount (₹)">
+<br>
+<input type="number" id="rate" placeholder="Interest Rate (%)">
+<br>
+<input type="number" id="months" placeholder="Loan Tenure (Months)">
+
+<br>
+
+<button onclick="calculateEMI()">Calculate EMI</button>
+
+<div class="result-box" id="result"></div>
+
+<br>
+
+<button onclick="copyResult()">Copy Result</button>
+
+</div>
+
+<!-- 🔥 SEO CONTENT START -->
+
+<h2>EMI Calculator Online Free (Complete Guide)</h2>
+
+<p>
+An EMI calculator is a powerful financial tool that helps you calculate your monthly loan payments quickly and accurately. Whether you are planning a home loan, car loan, or personal loan, this free EMI calculator makes it easy to estimate your monthly EMI.
+</p>
+
+<h2>What is EMI?</h2>
+
+<p>
+EMI stands for Equated Monthly Installment. It is the fixed amount you pay every month to repay your loan. It includes both principal amount and interest.
+</p>
+
+<h2>EMI Formula</h2>
+
+<p>
+EMI = P × R × (1+R)^N / ((1+R)^N - 1)
+</p>
+
+<ul>
+<li>P = Loan Amount</li>
+<li>R = Monthly Interest Rate</li>
+<li>N = Number of Months</li>
+</ul>
+
+<h2>How to Use EMI Calculator</h2>
+
+<ul>
+<li>Enter loan amount</li>
+<li>Enter interest rate</li>
+<li>Enter loan tenure</li>
+<li>Click calculate</li>
+</ul>
+
+<h2>Benefits of EMI Calculator</h2>
+
+<ul>
+<li>Instant calculation</li>
+<li>Accurate results</li>
+<li>Financial planning</li>
+<li>Easy comparison of loans</li>
+</ul>
+
+<h2>Types of Loans</h2>
+
+<ul>
+<li>Home Loan EMI</li>
+<li>Car Loan EMI</li>
+<li>Personal Loan EMI</li>
+<li>Education Loan EMI</li>
+</ul>
+
+<h2>High Demand Keywords</h2>
+
+<p>
+emi calculator, loan emi calculator, calculate emi online, home loan emi calculator, car loan emi calculator, personal loan emi, emi calculator india, emi calculator formula, bank emi calculator, interest calculator, monthly emi calculator, loan calculator online, emi calculation tool, housing loan emi, finance calculator, emi tool free, emi calculator app, best emi calculator online, calculate loan interest, emi planning tool
+</p>
+
+<h2>More Keywords</h2>
+
+<p>
+emi calculator with interest, emi calculator monthly payment, home loan calculator india, car loan interest calculator, personal loan calculator online free, loan interest calculator india, monthly payment calculator, emi calculation formula online, simple emi calculator, emi calculator website, finance emi tool, calculate emi instantly, best loan calculator online, interest rate calculator tool, loan planning calculator, emi breakdown calculator, mortgage calculator india, emi calculator free online, fast emi calculator tool, secure emi calculator
+</p>
+
+<h2>Conclusion</h2>
+
+<p>
+This EMI calculator tool is fast, accurate, and easy to use. It helps you plan your loans and manage your finances effectively.
+</p>
+
+<!-- 🔥 SEO CONTENT END -->
+
+<p>
+<a href="../index.html">🏠 Home</a> |
+<a href="password-generator.html">Password Generator</a>
+</p>
+
+</div>
+
+<script>
+
+// 🔥 EMI CALCULATION
+function calculateEMI(){
+
+let p = parseFloat(document.getElementById("amount").value);
+let r = parseFloat(document.getElementById("rate").value)/12/100;
+let n = parseFloat(document.getElementById("months").value);
+
+if(!p || !r || !n){
+alert("Please fill all fields");
+return;
+}
+
+let emi = (p*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+let total = emi * n;
+let interest = total - p;
+
+let resultText =
+"Monthly EMI: ₹" + emi.toFixed(2) + "\n" +
+"Total Payment: ₹" + total.toFixed(2) + "\n" +
+"Total Interest: ₹" + interest.toFixed(2);
+
+document.getElementById("result").innerText = resultText;
+
+}
+
+
+// 🔥 COPY RESULT
+function copyResult(){
+
+let text = document.getElementById("result").innerText;
+
+if(!text){
+alert("Calculate first");
+return;
+}
+
+navigator.clipboard.writeText(text);
+alert("Copied ✅");
+
+}
+
+</script>
+
+</body>
+</html>

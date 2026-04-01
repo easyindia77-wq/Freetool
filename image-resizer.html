@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Image Resizer Online Free | Resize Image Without Losing Quality</title>
+
+<meta name="description" content="Resize image online free. Change image width and height without losing quality. Fast, secure and browser-based image resizer tool.">
+
+<meta name="keywords" content="image resizer online, resize image, change image size, resize jpg png, photo resizer, image size changer, resize image without losing quality">
+
+<link rel="canonical" href="https://easytool.pages.dev/tools/image-resizer.html">
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+.tool-box{
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+input{
+margin:8px;
+padding:8px;
+}
+
+button{
+background:#2563eb;
+color:#fff;
+padding:10px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{background:#1e40af}
+
+img{
+max-width:100%;
+margin-top:15px;
+border-radius:10px;
+display:none;
+}
+
+a{
+display:none;
+margin-top:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Image Resizer Online Free</h1>
+
+<div class="tool-box">
+
+<input type="file" id="upload" accept="image/*">
+<br>
+
+<input type="number" id="width" placeholder="Enter Width (px)">
+<input type="number" id="height" placeholder="Enter Height (px)">
+
+<br><br>
+
+<button onclick="resizeImage()">Resize Image</button>
+
+<p id="status"></p>
+
+<img id="preview">
+
+<br>
+
+<a id="download">Download Image</a>
+
+</div>
+
+<!-- 🔥 SEO CONTENT START -->
+
+<h2>Resize Image Online Free</h2>
+
+<p>
+Image resizer online is one of the most useful tools for users who want to change image dimensions quickly. Whether you need to resize images for websites, social media, or documents, this tool helps you do it instantly without losing quality.
+</p>
+
+<p>
+This free image resizer works directly in your browser, which means no file upload is required. Your images remain private and secure.
+</p>
+
+<h2>Why Use Image Resizer?</h2>
+
+<ul>
+<li>Change image width and height</li>
+<li>Optimize images for websites</li>
+<li>Reduce large image dimensions</li>
+<li>Improve SEO performance</li>
+<li>Adjust images for social media</li>
+</ul>
+
+<h2>Features of This Tool</h2>
+
+<ul>
+<li>Resize image to custom size</li>
+<li>No quality loss</li>
+<li>Fast processing</li>
+<li>Mobile friendly</li>
+<li>Secure (no upload)</li>
+</ul>
+
+<h2>How to Resize Image</h2>
+
+<ul>
+<li>Select your image</li>
+<li>Enter width and height</li>
+<li>Click resize button</li>
+<li>Download resized image</li>
+</ul>
+
+<h2>Supported Formats</h2>
+
+<ul>
+<li>JPG / JPEG</li>
+<li>PNG</li>
+<li>WebP</li>
+</ul>
+
+<h2>SEO Benefits of Image Resizing</h2>
+
+<p>
+Resizing images improves page speed and performance, which helps in better search engine ranking.
+</p>
+
+<h2>Use Cases</h2>
+
+<ul>
+<li>Website images optimization</li>
+<li>Blog images resizing</li>
+<li>Social media posts</li>
+<li>Thumbnail creation</li>
+</ul>
+
+<h2>High Demand Keywords</h2>
+
+<p>
+image resizer online, resize image free, change image size, photo resizer, resize jpg png, image size changer, resize image without losing quality, reduce image dimensions, image resizer tool online, resize image instantly, free photo resizer, resize image for website, resize image for social media, image optimizer tool, fast image resizer
+</p>
+
+<h2>More SEO Keywords</h2>
+
+<p>
+resize image to specific size, change image width height online, image resizer free tool, resize photo online free, image scaling tool, reduce image dimensions online, resize image mobile friendly, best image resizer online, image resize without quality loss, compress and resize image, image editor online free, photo size adjust tool
+</p>
+
+<h2>Why Choose EasyTool?</h2>
+
+<p>
+EasyTool provides powerful SaaS-based tools that are fast, secure, and easy to use. All tools work directly in your browser.
+</p>
+
+<ul>
+<li>No login required</li>
+<li>Unlimited usage</li>
+<li>Fast performance</li>
+<li>Secure processing</li>
+</ul>
+
+<h2>Related Tools</h2>
+
+<a href="compress-50kb.html">Compress 50KB</a> |
+<a href="compress-100kb.html">Compress 100KB</a> |
+<a href="../index.html">Home</a>
+
+<!-- 🔥 SEO CONTENT END -->
+
+</div>
+
+<script>
+
+function resizeImage(){
+
+let file = document.getElementById("upload").files[0];
+let width = document.getElementById("width").value;
+let height = document.getElementById("height").value;
+
+if(!file || !width || !height){
+alert("Fill all fields");
+return;
+}
+
+let reader = new FileReader();
+let img = new Image();
+
+reader.onload = e => img.src = e.target.result;
+
+img.onload = function(){
+
+let canvas = document.createElement("canvas");
+let ctx = canvas.getContext("2d");
+
+canvas.width = width;
+canvas.height = height;
+
+ctx.drawImage(img,0,0,width,height);
+
+let url = canvas.toDataURL("image/jpeg");
+
+let preview = document.getElementById("preview");
+preview.src = url;
+preview.style.display = "block";
+
+let link = document.getElementById("download");
+link.href = url;
+link.download = "resized-image.jpg";
+link.style.display = "inline-block";
+
+document.getElementById("status").innerText =
+"Resized to: " + width + " x " + height + " px";
+
+};
+
+reader.readAsDataURL(file);
+}
+
+</script>
+
+</body>
+</html>

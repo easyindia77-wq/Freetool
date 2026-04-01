@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Compress Image to 100KB Online Free | Advanced Image Compressor</title>
+
+<meta name="description" content="Compress image to 100KB online free without losing quality. Smart image compression tool for JPG, PNG with fast processing and secure browser-based system.">
+
+<meta name="keywords" content="compress image to 100kb, image compressor online, reduce image size, photo compressor, compress jpg to 100kb, compress png to 100kb">
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+.tool-box{
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+button{
+background:#16a34a;
+color:#fff;
+padding:10px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+img{
+max-width:100%;
+margin-top:15px;
+border-radius:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Compress Image to 100KB Online Free</h1>
+
+<div class="tool-box">
+
+<input type="file" id="upload" accept="image/*">
+<br><br>
+
+<button onclick="compressImage()">Compress to 100KB</button>
+
+<p id="status"></p>
+
+<img id="preview" style="display:none">
+<br>
+<a id="download" style="display:none">Download Image</a>
+
+</div>
+
+<!-- CTA -->
+<p>
+👉 <a href="#tool">Start Compressing Now</a>
+</p>
+
+<!-- 🔥 SEO CONTENT START -->
+
+<h2>Compress Image to 100KB Online Free (Advanced Guide)</h2>
+
+<p>
+अगर आप “compress image to 100KB online” search कर रहे हैं, तो इसका मतलब है कि आपको अपनी image का size कम करना है लेकिन quality भी maintain रखनी है। यह tool इसी purpose के लिए बनाया गया है।
+</p>
+
+<p>
+यह advanced image compressor tool smart algorithm use करता है जिससे image size 100KB के आसपास optimize हो जाता है।
+</p>
+
+<h2>Why 100KB Image Compression Important?</h2>
+
+<ul>
+<li>Website performance improve करने के लिए</li>
+<li>Blog images optimize करने के लिए</li>
+<li>Fast loading pages के लिए</li>
+<li>SEO ranking improve करने के लिए</li>
+<li>Online sharing easy बनाने के लिए</li>
+</ul>
+
+<h2>How to Use</h2>
+
+<ol>
+<li>Upload image</li>
+<li>Click compress button</li>
+<li>Wait for processing</li>
+<li>Download optimized file</li>
+</ol>
+
+<h2>Features</h2>
+
+<ul>
+<li>Smart compression engine</li>
+<li>Auto quality adjustment</li>
+<li>Auto resize if needed</li>
+<li>Browser-based (no server)</li>
+<li>Mobile optimized UI</li>
+</ul>
+
+<h2>Supported Formats</h2>
+
+<ul>
+<li>JPG / JPEG</li>
+<li>PNG</li>
+<li>WebP</li>
+</ul>
+
+<h2>Advanced Compression System</h2>
+
+<p>
+यह tool 2 methods use करता है:
+</p>
+
+<ul>
+<li>Quality reduction</li>
+<li>Image resizing (अगर जरूरी हो)</li>
+</ul>
+
+<p>
+इससे better result मिलता है और size control आसान हो जाता है।
+</p>
+
+<h2>SEO Benefits</h2>
+
+<ul>
+<li>Fast website speed</li>
+<li>Better Google ranking</li>
+<li>Improved UX</li>
+<li>Lower bounce rate</li>
+</ul>
+
+<h2>Use Cases</h2>
+
+<ul>
+<li>Blog images</li>
+<li>Website optimization</li>
+<li>Social media images</li>
+<li>Portfolio images</li>
+</ul>
+
+<h2>Related Tools</h2>
+
+<p>
+<a href="compress-50kb.html">Compress 50KB</a> |
+<a href="image-resizer.html">Image Resizer</a> |
+<a href="jpg-to-png.html">JPG to PNG</a> |
+<a href="../index.html">Home</a>
+</p>
+
+<h2>High Traffic Keywords</h2>
+
+<p>
+compress image to 100kb, reduce image size online, image compressor free, compress jpg to 100kb, compress png to 100kb, optimize image for web, reduce photo size, image optimizer tool, compress image without losing quality, fast image compressor, seo image compression, reduce image file size, online image compressor tool, compress large image online, best image compressor 2026, reduce kb of image
+</p>
+
+<h2>FAQ</h2>
+
+<p><b>Q: Is it free?</b><br>Yes</p>
+<p><b>Q: Is quality safe?</b><br>Yes</p>
+<p><b>Q: Works on mobile?</b><br>Yes</p>
+
+<h2>Conclusion</h2>
+
+<p>
+यह tool fast, secure और powerful image compression solution है जो 100KB के आसपास image optimize करता है।
+</p>
+
+<p>
+👉 <a href="#">Start Now</a>
+</p>
+
+<!-- 🔥 SEO CONTENT END -->
+
+</div>
+
+<script>
+
+function compressImage(){
+
+let file = document.getElementById("upload").files[0];
+
+if(!file){
+alert("Upload image");
+return;
+}
+
+let reader = new FileReader();
+let img = new Image();
+
+reader.onload = e => img.src = e.target.result;
+
+img.onload = function(){
+
+let canvas = document.createElement("canvas");
+let ctx = canvas.getContext("2d");
+
+let width = img.width;
+let height = img.height;
+
+// 🔥 resize logic (advanced)
+let maxWidth = 1200;
+
+if(width > maxWidth){
+height *= maxWidth / width;
+width = maxWidth;
+}
+
+canvas.width = width;
+canvas.height = height;
+
+ctx.drawImage(img,0,0,width,height);
+
+let quality = 0.9;
+
+function loop(){
+
+canvas.toBlob(blob=>{
+
+if(blob.size <= 100000 || quality <= 0.1){
+
+let url = URL.createObjectURL(blob);
+
+document.getElementById("preview").src = url;
+document.getElementById("preview").style.display = "block";
+
+let d = document.getElementById("download");
+d.href = url;
+d.download = "compressed-100kb.jpg";
+d.style.display = "inline-block";
+
+document.getElementById("status").innerText =
+"Final Size: " + (blob.size/1024).toFixed(2) + " KB";
+
+}
+else{
+quality -= 0.05;
+loop();
+}
+
+},"image/jpeg",quality);
+
+}
+
+loop();
+
+}
+
+reader.readAsDataURL(file);
+
+}
+
+</script>
+
+</body>
+</html>

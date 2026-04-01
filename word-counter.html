@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Word Counter Online Free | Count Words, Characters, Sentences</title>
+
+<meta name="description" content="Free online word counter tool. Count words, characters, sentences and paragraphs instantly. Fast, accurate and browser-based tool.">
+
+<meta name="keywords" content="word counter online, character counter, count words tool, word count checker, text analyzer, free word counter">
+
+<link rel="canonical" href="https://easytool.pages.dev/tools/word-counter.html">
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+.tool-box{
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+textarea{
+width:100%;
+height:150px;
+padding:10px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+.result-box{
+margin-top:15px;
+font-weight:bold;
+}
+
+button{
+margin-top:10px;
+background:#2563eb;
+color:#fff;
+padding:10px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{background:#1e40af}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Word Counter Tool</h1>
+
+<div class="tool-box">
+
+<textarea id="text" placeholder="Type or paste your text here..." oninput="countText()"></textarea>
+
+<div class="result-box" id="result">
+Words: 0 | Characters: 0 | Sentences: 0 | Paragraphs: 0
+</div>
+
+<button onclick="clearText()">Clear Text</button>
+
+</div>
+
+<!-- 🔥 SEO CONTENT START -->
+
+<h2>Free Online Word Counter Tool</h2>
+
+<p>
+Word counter online is an essential tool for writers, students, bloggers, and SEO experts. It helps you count words, characters, sentences, and paragraphs instantly.
+</p>
+
+<p>
+This tool works directly in your browser and updates results in real-time as you type or paste text.
+</p>
+
+<h2>Why Use Word Counter?</h2>
+
+<ul>
+<li>Check word count for essays and articles</li>
+<li>Optimize content for SEO</li>
+<li>Track character limits</li>
+<li>Improve writing efficiency</li>
+</ul>
+
+<h2>Features</h2>
+
+<ul>
+<li>Real-time counting</li>
+<li>Word count</li>
+<li>Character count</li>
+<li>Sentence count</li>
+<li>Paragraph count</li>
+</ul>
+
+<h2>How to Use</h2>
+
+<ul>
+<li>Paste or type text</li>
+<li>View live results</li>
+<li>Clear text anytime</li>
+</ul>
+
+<h2>Use Cases</h2>
+
+<ul>
+<li>Blog writing</li>
+<li>Essay writing</li>
+<li>SEO content optimization</li>
+<li>Social media posts</li>
+</ul>
+
+<h2>High Demand Keywords</h2>
+
+<p>
+word counter online, character counter, word count tool, text analyzer, word counter free, count words online, seo word counter, text counter tool, word checker online, character count tool
+</p>
+
+<h2>More SEO Keywords</h2>
+
+<p>
+online word count tool, count characters online, free text analyzer, word counter for seo, count sentences tool, paragraph counter online, text length checker, writing tool online, best word counter tool, fast text counter
+</p>
+
+<h2>Why Choose EasyTool?</h2>
+
+<p>
+EasyTool provides fast, secure and easy-to-use tools that run directly in your browser.
+</p>
+
+<ul>
+<li>No login required</li>
+<li>Unlimited usage</li>
+<li>Fast performance</li>
+<li>Secure processing</li>
+</ul>
+
+<h2>Related Tools</h2>
+
+<a href="json-formatter.html">JSON Formatter</a> |
+<a href="../index.html">Home</a>
+
+<!-- 🔥 SEO CONTENT END -->
+
+</div>
+
+<script>
+
+function countText(){
+
+let text = document.getElementById("text").value;
+
+// Words
+let words = text.trim() ? text.trim().split(/\s+/).length : 0;
+
+// Characters
+let chars = text.length;
+
+// Sentences
+let sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
+
+// Paragraphs
+let paragraphs = text.split(/\n+/).filter(p => p.trim().length > 0).length;
+
+document.getElementById("result").innerText =
+"Words: " + words +
+" | Characters: " + chars +
+" | Sentences: " + sentences +
+" | Paragraphs: " + paragraphs;
+
+}
+
+function clearText(){
+document.getElementById("text").value = "";
+countText();
+}
+
+</script>
+
+</body>
+</html>

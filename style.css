@@ -1,0 +1,177 @@
+/* 🔥 RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+/* 🔥 BODY */
+body{
+background:#f5f7fb;
+color:#0f172a;
+line-height:1.6;
+}
+
+/* 🔥 CONTAINER */
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+/* 🔥 HEADER */
+.header{
+background:#2563eb;
+color:#fff;
+padding:25px;
+text-align:center;
+}
+
+.header h1{
+font-size:28px;
+margin-bottom:5px;
+}
+
+.header p{
+font-size:14px;
+opacity:0.9;
+}
+
+/* 🔥 TOOL GRID */
+.tools{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+/* 🔥 CARD */
+.card{
+background:#fff;
+padding:15px;
+border-radius:12px;
+text-align:center;
+text-decoration:none;
+color:#000;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+transition:0.3s;
+font-weight:bold;
+}
+
+.card:hover{
+background:#e0e7ff;
+transform:translateY(-3px);
+}
+
+/* 🔥 HEADINGS */
+h1,h2{
+margin-top:20px;
+margin-bottom:10px;
+}
+
+/* 🔥 LIST */
+ul{
+padding-left:20px;
+margin-top:10px;
+}
+
+li{
+margin-bottom:5px;
+}
+
+/* 🔥 LINKS */
+a{
+color:#2563eb;
+text-decoration:none;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+/* 🔥 TOOL BOX */
+.tool-box{
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+margin-top:20px;
+text-align:center;
+}
+
+/* 🔥 INPUT */
+input, textarea{
+width:100%;
+padding:10px;
+border:1px solid #ccc;
+border-radius:8px;
+margin-top:10px;
+font-size:14px;
+}
+
+/* 🔥 BUTTON */
+button{
+background:#2563eb;
+color:#fff;
+border:none;
+padding:10px 20px;
+border-radius:8px;
+cursor:pointer;
+margin-top:10px;
+font-size:14px;
+transition:0.3s;
+}
+
+button:hover{
+background:#1e40af;
+}
+
+/* 🔥 RESULT TEXT */
+#result{
+margin-top:15px;
+font-weight:bold;
+}
+
+/* 🔥 IMAGE PREVIEW */
+img{
+max-width:100%;
+margin-top:15px;
+border-radius:10px;
+}
+
+/* 🔥 DOWNLOAD LINK */
+#download{
+display:none;
+margin-top:10px;
+display:inline-block;
+background:#16a34a;
+color:#fff;
+padding:8px 15px;
+border-radius:8px;
+text-decoration:none;
+}
+
+#download:hover{
+background:#15803d;
+}
+
+/* 🔥 FOOTER */
+.footer{
+text-align:center;
+padding:20px;
+background:#0f172a;
+color:#fff;
+margin-top:40px;
+font-size:14px;
+}
+
+/* 🔥 MOBILE */
+@media(max-width:600px){
+.header h1{
+font-size:22px;
+}
+.container{
+padding:15px;
+}
+}

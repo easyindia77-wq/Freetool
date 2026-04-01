@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JSON Formatter Online Free | Beautify & Minify JSON Tool</title>
+
+<meta name="description" content="Free JSON formatter online tool to beautify, validate and minify JSON data. Fast, secure and browser-based JSON viewer.">
+
+<meta name="keywords" content="json formatter, json beautifier, json validator, json viewer, json minify, format json online, free json tool">
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+.tool-box{
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+textarea{
+width:100%;
+height:200px;
+padding:10px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+margin:5px;
+padding:10px 15px;
+border:none;
+border-radius:8px;
+background:#2563eb;
+color:#fff;
+cursor:pointer;
+}
+
+button:hover{background:#1e40af}
+
+pre{
+text-align:left;
+background:#111;
+color:#0f0;
+padding:10px;
+border-radius:8px;
+overflow:auto;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>JSON Formatter Tool</h1>
+
+<div class="tool-box">
+
+<textarea id="input" placeholder="Paste your JSON here..."></textarea>
+
+<br>
+
+<button onclick="formatJSON()">Beautify</button>
+<button onclick="minifyJSON()">Minify</button>
+<button onclick="copyJSON()">Copy</button>
+<button onclick="clearJSON()">Clear</button>
+
+<pre id="output"></pre>
+
+</div>
+
+<!-- 🔥 SEO CONTENT START -->
+
+<h2>JSON Formatter Online Free (Complete Guide)</h2>
+
+<p>
+JSON Formatter is an essential tool for developers, programmers, and API users. It helps to beautify, validate, and minify JSON data easily. This free JSON formatter works directly in your browser without any server processing.
+</p>
+
+<p>
+With this tool, you can convert messy JSON into readable format, debug APIs, and optimize JSON for faster performance.
+</p>
+
+<h2>What is JSON?</h2>
+
+<p>
+JSON (JavaScript Object Notation) is a lightweight data format used for storing and exchanging data between server and client.
+</p>
+
+<h2>Features of JSON Formatter Tool</h2>
+
+<ul>
+<li>Beautify JSON (pretty format)</li>
+<li>Minify JSON (reduce size)</li>
+<li>Validate JSON instantly</li>
+<li>Copy JSON with one click</li>
+<li>100% browser-based (no server)</li>
+</ul>
+
+<h2>How to Use JSON Formatter</h2>
+
+<ul>
+<li>Paste your JSON data</li>
+<li>Click Beautify or Minify</li>
+<li>Copy formatted JSON</li>
+</ul>
+
+<h2>SEO Benefits</h2>
+
+<ul>
+<li>Optimized API responses</li>
+<li>Faster loading applications</li>
+<li>Better debugging</li>
+</ul>
+
+<h2>High Demand Keywords</h2>
+
+<p>
+json formatter online, json beautifier free, json validator tool, format json online, json viewer tool, json minify tool, api json formatter, json pretty print, json cleaner tool, free json editor, json debug tool, json beautify online, json formatter browser, json format tool free, json converter online, json parser tool, json viewer online, json code formatter, json beautifier javascript, json formatter mobile, json formatter without server, json validator free, json editor online free, json formatting tool, json data formatter
+</p>
+
+<h2>More Related Keywords</h2>
+
+<p>
+json minifier online, json parser free, json pretty formatter, json code beautifier, json debug online tool, json viewer free, json editor browser, api formatter json, json format and validate, json structure viewer, json beautifier no login, json format instant, json viewer developer tool, json formatting online free, json beautifier fast tool, json parser online, json cleaner free, json code viewer, json beautifier tool free, json formatter seo tool
+</p>
+
+<h2>Conclusion</h2>
+
+<p>
+This JSON Formatter Tool is a fast, secure, and powerful solution for formatting JSON data. It helps developers and users to work efficiently with JSON.
+</p>
+
+<!-- 🔥 SEO CONTENT END -->
+
+<p>
+<a href="../index.html">🏠 Home</a>
+</p>
+
+</div>
+
+<script>
+
+function formatJSON(){
+let input = document.getElementById("input").value;
+
+try{
+let obj = JSON.parse(input);
+document.getElementById("output").innerText = JSON.stringify(obj, null, 4);
+}catch(e){
+alert("Invalid JSON ❌");
+}
+}
+
+function minifyJSON(){
+let input = document.getElementById("input").value;
+
+try{
+let obj = JSON.parse(input);
+document.getElementById("output").innerText = JSON.stringify(obj);
+}catch(e){
+alert("Invalid JSON ❌");
+}
+}
+
+function copyJSON(){
+let text = document.getElementById("output").innerText;
+
+if(!text){
+alert("Nothing to copy");
+return;
+}
+
+navigator.clipboard.writeText(text);
+alert("Copied ✅");
+}
+
+function clearJSON(){
+document.getElementById("input").value = "";
+document.getElementById("output").innerText = "";
+}
+
+</script>
+
+</body>
+</html>

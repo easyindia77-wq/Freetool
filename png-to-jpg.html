@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PNG to JPG Converter Online Free | Convert PNG to JPEG Easily</title>
+
+<meta name="description" content="Convert PNG to JPG online free. Fast, secure and browser-based image converter tool. Reduce PNG size and convert to JPEG without quality loss.">
+
+<meta name="keywords" content="png to jpg converter, convert png to jpg online, png to jpeg, image converter free, reduce png size, convert png image">
+
+<link rel="canonical" href="https://easytool.pages.dev/tools/png-to-jpg.html">
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+.tool-box{
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+button{
+background:#2563eb;
+color:#fff;
+padding:10px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{background:#1e40af}
+
+img{
+max-width:100%;
+margin-top:15px;
+border-radius:10px;
+display:none;
+}
+
+a{
+display:none;
+margin-top:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>PNG to JPG Converter Online</h1>
+
+<div class="tool-box">
+
+<input type="file" id="upload" accept="image/png">
+<br><br>
+
+<button onclick="convertToJPG()">Convert to JPG</button>
+
+<p id="status"></p>
+
+<img id="preview">
+
+<br>
+
+<a id="download">Download JPG</a>
+
+</div>
+
+<!-- 🔥 SEO CONTENT START -->
+
+<h2>Convert PNG to JPG Online Free</h2>
+
+<p>
+PNG to JPG converter is a powerful tool that helps users convert PNG images into JPG format quickly. JPG format reduces file size and is widely supported across all devices and platforms.
+</p>
+
+<p>
+This tool works directly in your browser, ensuring your images are never uploaded to any server. It is fast, secure, and completely free.
+</p>
+
+<h2>Why Convert PNG to JPG?</h2>
+
+<ul>
+<li>Reduce file size</li>
+<li>Faster loading images</li>
+<li>Better compatibility</li>
+<li>Save storage space</li>
+</ul>
+
+<h2>Key Features</h2>
+
+<ul>
+<li>Fast PNG to JPG conversion</li>
+<li>High quality output</li>
+<li>No server upload</li>
+<li>Mobile friendly</li>
+<li>Free to use</li>
+</ul>
+
+<h2>How to Use This Tool</h2>
+
+<ul>
+<li>Select PNG image</li>
+<li>Click convert button</li>
+<li>Download JPG file</li>
+</ul>
+
+<h2>Supported Formats</h2>
+
+<ul>
+<li>Input: PNG</li>
+<li>Output: JPG / JPEG</li>
+</ul>
+
+<h2>Transparency Handling</h2>
+
+<p>
+PNG images support transparency, but JPG does not. This tool automatically adds a white background to preserve visual appearance.
+</p>
+
+<h2>Use Cases</h2>
+
+<ul>
+<li>Website image optimization</li>
+<li>Social media uploads</li>
+<li>Photo sharing</li>
+<li>Reduce image size</li>
+</ul>
+
+<h2>High Demand Keywords</h2>
+
+<p>
+png to jpg converter, convert png to jpg online, png to jpeg, image converter free, reduce png size, convert png image, png to jpg high quality, online image converter, fast png converter, free image converter tool
+</p>
+
+<h2>More SEO Keywords</h2>
+
+<p>
+convert png to jpeg online free, png image to jpg converter, reduce image file size online, image optimizer tool, compress png to jpg, best png to jpg converter, fast image conversion tool, convert image format instantly, jpg converter free, png to jpg mobile tool
+</p>
+
+<h2>Why Choose EasyTool?</h2>
+
+<p>
+EasyTool provides fast, secure, and easy-to-use online tools. All tools are browser-based and require no installation.
+</p>
+
+<ul>
+<li>No login required</li>
+<li>Unlimited usage</li>
+<li>Secure processing</li>
+<li>Fast performance</li>
+</ul>
+
+<h2>Related Tools</h2>
+
+<a href="jpg-to-png.html">JPG to PNG</a> |
+<a href="image-resizer.html">Image Resizer</a> |
+<a href="../index.html">Home</a>
+
+<!-- 🔥 SEO CONTENT END -->
+
+</div>
+
+<script>
+
+function convertToJPG(){
+
+let file = document.getElementById("upload").files[0];
+
+if(!file){
+alert("Upload PNG image");
+return;
+}
+
+let reader = new FileReader();
+let img = new Image();
+
+reader.onload = e => img.src = e.target.result;
+
+img.onload = function(){
+
+let canvas = document.createElement("canvas");
+let ctx = canvas.getContext("2d");
+
+// 👉 PNG transparency fix (white background)
+canvas.width = img.width;
+canvas.height = img.height;
+
+ctx.fillStyle = "#ffffff";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+ctx.drawImage(img,0,0);
+
+// 👉 Convert to JPG
+let url = canvas.toDataURL("image/jpeg", 0.9);
+
+let preview = document.getElementById("preview");
+preview.src = url;
+preview.style.display = "block";
+
+let link = document.getElementById("download");
+link.href = url;
+link.download = "converted.jpg";
+link.style.display = "inline-block";
+
+document.getElementById("status").innerText = "Conversion successful ✅";
+
+};
+
+reader.readAsDataURL(file);
+}
+
+</script>
+
+</body>
+</html>
