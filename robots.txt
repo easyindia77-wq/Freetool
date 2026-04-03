@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Important folders allow
+Allow: /tools/
+Allow: /blog/
+
+# Block unnecessary (optional)
+Disallow: /assets/private/
+
+# Sitemap
+Sitemap: https://easytool.pages.dev/sitemap.xml
